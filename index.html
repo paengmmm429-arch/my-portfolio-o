@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | พะแนงอยากติด IT</title>
+  <style>
+    :root {
+      --primary: #5b2b82; /* CMU Purple */
+      --secondary: #f3e8ff;
+      --text: #2e1a47;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #7c3aed);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.95; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .avatar {
+      font-size: 5rem;
+      background: var(--secondary);
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      margin: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .project {
+      border: 2px dashed var(--primary);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #ede0ff;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #3b1d5a;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.7rem 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; }
+      nav ul.active { display: flex; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <style>
+    .pp{
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+
+<header>
+  <h1>พะแนงอยากติด IT 🐱</h1>
+  <p>Portfolio | นางสาว นฤมล ชมชื่น บุญวาทย์วิทาลัย IT Student</p>
+</header>
+
+<nav>
+  <strong>Portfolio</strong>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <ul id="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <div class="card profile">
+    <div class="avatar">
+      <img class="pp" src="images.jpg" alt="">
+    </div>
+    <div>
+      <h2>เกี่ยวกับฉัน | About Me</h2>
+      <p><strong>ชื่อ:</strong> นางสาวนฤมล ชมชื่น (พะแนง)</p>
+      <p>นักเรียนชั้นมัธยมศึกษาปีที่ 5 แผนการเรียน วิทย์–คณิต–คอมพิวเตอร์</p>
+      <p>มีความสนใจด้านเทคโนโลยีสารสนเทศ ต้องการศึกษาต่อด้าน IT เพื่อพัฒนาทักษะการคิด วิเคราะห์ และสร้างสรรค์สิ่งใหม่ ๆ</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="card">
+    <h2>ทักษะ | Skills</h2>
+    <div class="skills">
+      <span>HTML (Basic)</span>
+      <span>Python (Basic)</span>
+      <span>C / Scratch</span>
+      <span>VS Code</span>
+      <span>GitHub (Basic)</span>
+      <span>Canva</span>
+      <span>Microsoft Office</span>
+      <span>Self-learning</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="card">
+    <h2>ผลงาน | Projects</h2>
+    <div class="projects">
+      <div class="project"> ทำโทรศัพท์หาย <br/>ทำไงดีๆๆๆ</div>
+      <div class="project">Template ผลงานที่ 2<br/>ใส่รายละเอียด</div>
+      <div class="project">Template ผลงานที่ 3<br/>เพิ่มรูป / ลิงก์</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>ติดต่อ | Contact</h2>
+    <p>📧 Gmail: <a href="mailto:paengmmm429@gmail.com">paengmmm429@gmail.com</a></p>
+    <a class="btn" href="#">📄 Download Portfolio (PDF)</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Portfolio | พะแนงอยากติด IT
+</footer>
+
+<button id="topBtn" onclick="scrollTopPage()">⬆️</button>
+
+<script>
+  const topBtn = document.getElementById('topBtn');
+
+  window.onscroll = () => {
+    topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  };
+
+  function scrollTopPage() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
